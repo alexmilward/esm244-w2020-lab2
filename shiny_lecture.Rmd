@@ -1,0 +1,27 @@
+---
+title: "Shiny_App_Lecture"
+author: "Alex Milward"
+date: "1/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+User Interface
+-Layout, Theme, Widgets
+-Widgets: collect information from the user (i.e. selection/input) that will be used to update outputs created in the server like...
+    - Dropdown selection
+    - Radio Buttons/Checkboxes
+    - Slider bars
+
+Reactivity Into: (for our purposes today)
+- In user interface: make a choice --> widget gets info from user --> |update df used to create outputs based on user choice --> create updated outputs from new df| --> and put that ouput in UI
+    - |in server|
+
+Our Reactivity Today:
+1.) IN UI: make a widget that has a name (inputID)
+2.) In Server: use that inputID to create a reactive subset of data
+3.) In Server: make a names output (e.g. graph/table) using reactive subset
+4.) In UI: call the reactive output to make it appear
